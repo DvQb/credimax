@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@layer {
+  body {
+    @apply bg-slate-200 w-[80%] m-auto max-w-[1920px];
+  }
+}
