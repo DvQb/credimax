@@ -2,21 +2,35 @@
 import React, { useState } from 'react';
 
 export default function SolicitarCredito() {
-  const [form, setForm] = useState({
+  const [formData, setFormData] = useState({
     nombre: '',
+    ocupacion: '',
+    salario: '',
+    antiguedad: '' ,
     correo: '',
     telefono: '',
   });
 
   const handleChange = e => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    console.log('Datos enviados:', form);
-    alert('¡Solicitud enviada correctamente!');
-  };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const res = await fetch('http://localhost:3001/clientes', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    });
+    if (res.ok) {
+      alert("¡Solicitud enviada con éxito!");
+    }
+  } catch (error) {
+    console.error("Error al enviar datos:", error);
+  }
+};
+
 
   return (
     <div className="max-w-md mt-20 pb-20  mx-auto p-4">
