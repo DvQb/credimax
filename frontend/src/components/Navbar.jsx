@@ -1,7 +1,12 @@
 
 import logo from '/credimax.png'
+import { Link } from 'react-router-dom';
+
+
 
 const Navbar = () => {
+
+    const autenticado = localStorage.getItem('auth') === 'true';
 
     return(
 
@@ -17,7 +22,7 @@ const Navbar = () => {
                 <ul className="flex justify-around my-8 text-xl">
 
                             <li>
-                                <a href="">Inicio</a>
+                                <Link to='/'>Inicio</Link>
                             </li>
                             <li>
                                 <a href="">Servicios</a>
@@ -26,7 +31,7 @@ const Navbar = () => {
                                 <a href="">Contactanos</a>
                             </li>
                             <li>
-                                <a href="">Mi cuenta</a>
+                                <Link to={autenticado ? '/dashboard' : '/login'} className=""> Mi cuenta </Link>
                             </li>
                             
 

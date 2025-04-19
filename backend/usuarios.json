@@ -1,0 +1,23 @@
+[
+  {
+    "nombre": "1",
+    "ocupacion": "1",
+    "salario": "1",
+    "antiguedad": "1",
+    "correo": "1",
+    "telefono": "1",
+    "password": ""
+  },
+  {
+    "correo": "pedro@gmail.com",
+    "password": "pedro1"
+  },
+  {
+    "correo": "pedro2@gmail.com",
+    "password": "pedro2"
+  },
+  {
+    "correo": "pedro3@gmail.com",
+    "password": "pedro3"
+  }
+]

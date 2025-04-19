@@ -1,18 +1,10 @@
 [
   {
-    "nombre": "",
-    "ocupacion": "",
-    "salario": "",
-    "antiguedad": "",
-    "correo": "",
-    "telefono": ""
-  },
-  {
-    "nombre": "dgd",
-    "ocupacion": "gdfgdf",
-    "salario": "dgdf",
-    "antiguedad": "gdg",
-    "correo": "gdg",
-    "telefono": "dgdf"
+    "nombre": "1",
+    "ocupacion": "1",
+    "salario": "1",
+    "antiguedad": "1",
+    "correo": "1",
+    "telefono": "1"
   }
 ]
